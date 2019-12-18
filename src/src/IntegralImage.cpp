@@ -16,7 +16,7 @@ void IntegralImage::vIntegralImage(cv::Mat& imgsrc, cv::Mat& integralImg)
 	//for all columns, 4 columns at once
 	int col, row ;
 	#pragma omp parallel for private( col, row )
-	for( col = 0 ; col < imgsrc.cols-3 ; col=col+4 ) {
+	for( col = 0 ; col < imgsrc.cols-3; col=col+4 ) {
 		__m128 sumCurrSSE = _mm_set1_ps( 0 ) ;
 		for( row = 0 ; row < imgsrc.rows ; ++row ) {
 			sumCurrSSE = _mm_add_ps( sumCurrSSE,

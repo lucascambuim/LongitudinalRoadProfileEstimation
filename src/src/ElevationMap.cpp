@@ -67,6 +67,7 @@ void ElevationMap::draw(cv::Mat& dispImgOrg, cv::Mat& dispImgUDFiltered, cv::Mat
 			//road point
 			if(segmentRoad && !udf && !tooClose && row > currRowOfDisp-toleranceFactor*row && row < currRowOfDisp+toleranceFactor*row)
 			{
+				//cout << "OPAAAA" << endl;
 				plainElevationMapColored_(row, col)[0] = 100;
 				plainElevationMap.at<float>(row, col) = 0;
 			}

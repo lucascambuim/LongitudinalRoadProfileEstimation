@@ -1,3 +1,0 @@
-Please visit this link for the sources of LIBVISO2:
-
-http://www.cvlibs.net/software/libviso/

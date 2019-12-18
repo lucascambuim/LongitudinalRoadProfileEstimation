@@ -5,7 +5,11 @@
  *      Author: joos
  */
 
-#include <opencv/cv.h>
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/opencv.hpp>
+
+using namespace std;
+//using namespace cv;
 
 #ifndef CUBICBSPLINE_H_
 #define CUBICBSPLINE_H_

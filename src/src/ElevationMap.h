@@ -7,6 +7,9 @@
 
 #include <opencv/cv.h>
 #include "RoadRepresentation.h"
+#include <iostream>
+
+using namespace std;
 
 #ifndef ELEVATIONMAP_H_
 #define ELEVATIONMAP_H_

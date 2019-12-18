@@ -1,0 +1,38 @@
+/*
+ * EasyVisualOdometry.h
+ *
+ *  Created on: 20.07.2011
+ *      Author: joos
+ */
+
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/opencv.hpp>
+#include <string>
+#include "libviso2/src/viso_stereo.h"
+#include "libviso2/src/matcher.h"
+#include "libviso2/src/matrix.h"
+//#include "matrix.h"
+
+using namespace std;
+
+#ifndef EASYVISUALODOMETRY_H_
+#define EASYVISUALODOMETRY_H_
+
+class EasyVisualOdometry
+{
+	private:
+		//VisualOdometry visualOdometry;
+        //VisualOdometryStereo::parameters param;
+        //VisualOdometryStereo viso;
+		Matcher matcher;
+		Matrix visoTrans;
+
+	public:
+		EasyVisualOdometry(float f, float cu, float cv, float b);
+
+		void pushImagePair(string leftImage, string rightImage);
+		void computeStep();
+		void getTransformation(cv::Mat& transformationMatrix_f);
+};
+
+#endif /* EASYVISUALODOMETRY_H_ */
